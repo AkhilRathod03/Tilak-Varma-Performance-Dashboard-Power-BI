@@ -1,0 +1,32 @@
+Generating mock data...
+Player data saved to C:\Users\VASANTH RAO\Desktop\cricket_player_dashboard\player_data.csv
+Creating interactive dashboard...
+Traceback (most recent call last):
+  File "C:\Users\VASANTH RAO\Desktop\cricket_player_dashboard\create_dashboard.py", line 214, in <module>
+    create_dashboard(player_df, player_name)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\VASANTH RAO\Desktop\cricket_player_dashboard\create_dashboard.py", line 132, in create_dashboard
+    fig = make_subplots(
+        rows=3, cols=4,
+    ...<6 lines>...
+        subplot_titles=("", "Total Runs", "Highest Score", "Matches Played", "", "", "", "", "Yearly Performance")
+    )
+  File "C:\Users\VASANTH RAO\AppData\Roaming\Python\Python313\site-packages\plotly\subplots.py", line 305, in make_subplots
+    return _sub.make_subplots(
+           ~~~~~~~~~~~~~~~~~~^
+        rows,
+        ^^^^^
+    ...<17 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\VASANTH RAO\AppData\Roaming\Python\Python313\site-packages\plotly\_subplots.py", line 744, in make_subplots
+    subplot_refs = _init_subplot(
+        layout, subplot_type, secondary_y, x_domain, y_domain, max_subplot_ids
+    )
+  File "C:\Users\VASANTH RAO\AppData\Roaming\Python\Python313\site-packages\plotly\_subplots.py", line 1106, in _init_subplot
+    subplot_type = _validate_coerce_subplot_type(subplot_type)
+  File "C:\Users\VASANTH RAO\AppData\Roaming\Python\Python313\site-packages\plotly\_subplots.py", line 1097, in _validate_coerce_subplot_type
+    raise ValueError("Unsupported subplot type: {}".format(repr(orig_subplot_type)))
+ValueError: Unsupported subplot type: 'gauge'
